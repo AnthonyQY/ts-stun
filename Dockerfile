@@ -2,7 +2,7 @@ FROM node:22-slim
 
 WORKDIR /usr/src/app
 
-RUN npm install -g ts-node typescript
+RUN npm install -g ts-node typescript @types/node
 
 COPY server.ts .
 
