@@ -1,6 +1,6 @@
-import dgram, { RemoteInfo, Socket } from "node:dgram";
+import { createSocket, RemoteInfo, Socket } from "node:dgram";
 
-const server: Socket = dgram.createSocket("udp4");
+const server: Socket = createSocket("udp4");
 
 const MAGIC_COOKIE: number = 0x2112a442;
 
