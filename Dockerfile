@@ -6,7 +6,7 @@ RUN npm install -g ts-node typescript @types/node
 
 COPY server.ts .
 
-RUN echo '{ "compilerOptions": { "module": "commonjs", "target": "ES2020" } }' > tsconfig.json
+RUN echo '{ "compilerOptions": { "module": "commonjs", "target": "ES2020", "types": ["node"] } }' > tsconfig.json
 
 EXPOSE 3478/udp
 
