@@ -25,7 +25,7 @@ server.on("message", (msg: Buffer, rinfo: RemoteInfo) => {
   // Read message length
   const MESSAGE_LENGTH: number = msg.readUInt16BE(2);
 
-  // Check if magic cookie matches hardcoded value (RGC-5389)
+  // Check if magic cookie matches hardcoded value (RFC-5389)
   if (msg.readUInt32BE(4) !== MAGIC_COOKIE) {
     console.log("Message does not contain a matching magic cookie. (RFC-5389)");
     return;
